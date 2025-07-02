@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Move into head -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Terra+ is your hub for eco-conscious living, offering tips, products, and solutions for a sustainable future.">
+    <meta name="keywords" content="Terra+, sustainability, eco-friendly, green living, environment, climate, zero waste, carbon footprint">
+    <meta name="author" content="Terra+ Team">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="google" content="notranslate">
+    <meta name="google" content="nositelinkssearchbox">
+
+    <!-- Open Graph / Facebook / Instagram -->
+    <meta property="og:title" content="Terra+">
+    <meta property="og:description" content="Explore Terra+ — your guide to sustainability, green products, and environmental action.">
+    <meta property="og:image" content="https://www.terra-plus.com/Images/Assets/Logo/Terra_Plus_logo.png">
+    <meta property="og:url" content="https://www.terra-plus.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terra+">
+    <meta name="twitter:description" content="Discover eco-friendly living with Terra+. Tips, tools, and ideas to help you live lighter on the planet.">
+    <meta name="twitter:image" content="https://www.terra-plus.com/Images/Assets/Logo/Terra_Plus_logo.png">
+    <!-- Optional Twitter handle (uncomment and update if you have one) -->
+    <!-- <meta name="twitter:site" content="@TerraPlus"> -->
+    <!-- <meta name="twitter:creator" content="@TerraPlus"> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/Images/Assets/Logo/Terra_Plus_graphical_logo.png">
+    
+
+
+    <!-- jquery@3.7.1 -->
+    <script src="/plugins/jquery@3.7.1/jquery-3.7.1.min.js"></script>
+    
+    <!-- Bootstrap@4.6.2 CSS & JS -->
+    <!-- <link rel="stylesheet" href="/plugins/bootstrap@4.6.2/bootstrap.min.css">
+    <script src="/plugins/bootstrap@4.6.2/bootstrap.min.js"></script> -->
+
+    <!-- Bootstrap@5.0.2 CSS & JS -->
+    <link rel="stylesheet" href="/plugins/bootstrap@5.0.2/bootstrap.min.css">
+    <!-- <script src="/plugins/bootstrap@5.0.2/bootstrap.min.js"></script> -->
+    
+    <!-- SweetAlert2@11.21.2 CSS & JS -->
+    <link rel="stylesheet" href="/plugins/sweetalert2@11.21.2/sweetalert2.min.css">
+    <script src="/plugins/sweetalert2@11.21.2/sweetalert2.min.js"></script>
+
+    <!-- GSAP@3.12.2 -->
+    <script src="/plugins/gsap@3.12.2/gasp.min.js"></script>
+
+    <!-- Animate@4.1.1 -->
+    <link rel="stylesheet" href="/plugins/animate@4.1.1/animate.min.css">
+    
+    <!-- Locomotive Scroll@4.1.4 CSS & JS -->
+    <link rel="stylesheet" href="/plugins/locomotive-scroll@4.1.4/locomotive-scroll.min.css">
+    <script src="/plugins/locomotive-scroll@4.1.4/locomotive-scroll.min.js"></script>
+
+    <!-- Local Custom CSS -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    
+    <!-- Bootstrap 5.0.2 Bundle JS (before </body>) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Page Title -->
+    <title>Terra+</title>
+
+    <style>
+        .card { scale: 1; transition: scale 0.5s ease-in-out; }
+        .card:hover { scale: 1.05; }
+
+        .section_1 { display: flex; padding: 3% 10%; }
+        .section_1 .card { background-color: #98B35E; margin-top: 7%; display: flex; flex-grow: 1; flex-direction: row; align-items: center; justify-content: space-between; }
+        .section_1 .card .title_wrap { display: flex; flex-direction: column; align-items: start; justify-content: center; padding: 0 0 0 5%; }
+        .section_1 .card .title_wrap h5 { font-size: 4.17dvw; color: var(--white); }
+        .section_1 .card .title_wrap p { font-size: 1.25dvw; color: var(--white); font-family: 'Lato'; }
+        .section_1 .card .image_wrap { display: flex; align-items: center; justify-content: end; height: 90%; }
+        .section_1 .card .image_wrap img { width: auto; height: 100%; }
+        .section_1 .card #scroll_down { position: absolute; bottom: 5%;left: 0; right: 0; margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.52dvw; cursor: pointer; animation: moveUpDown 2.0s infinite; }
+        .section_1 .card #scroll_down span { font-size: 1.25dvw;color: var(--white); text-decoration: underline; }
+        .section_1 .card #scroll_down svg { width: 1.20dvw; height: 1.56dvw; }
+        .section_1 .card #scroll_down svg path { fill: var(--white); }
+        @media (max-width: 768px) {
+            .section_1 { padding: 5%; }
+            .section_1 .card { margin-top: 17.71dvw; flex-direction: column; }
+            .section_1 .card .title_wrap { padding: 5% 8% 0 8%; }
+            .section_1 .card .title_wrap h5 { font-size: 10.00dvw; }
+            .section_1 .card .title_wrap p { font-size: 3.33dvw; }
+            .section_1 .card .image_wrap img { width: 80%; height: auto; }
+            .section_1 .card #scroll_down span { font-size: 5.00dvw; }
+            .section_1 .card #scroll_down svg { width: 4.79dvw; height: 6.25dvw; }
+        }
+
+        .section_2 { display: flex; flex-direction: row; align-items: stretch; justify-content: center; gap: 2.08dvw; margin: 5% 10%; }
+        .section_2 h2 { color: var(--black); font-size: 3.35dvw; margin: 0; }
+        .section_2 .left_wrap { width: 50%; display: flex; flex: 1; flex-direction: column; gap: 1.04dvw; }
+        .section_2 .left_wrap .card_1 { background-color: var(--primary); padding: 5%; }
+        .section_2 .left_wrap .card_1 h5 { margin: 0; color: var(--white); font-size: 0.94dvw; }
+        .section_2 .left_wrap .card_1 h6 { margin: 0; color: var(--white); font-size: 1.67dvw; font-family: 'Lato-Bold'; }
+        .section_2 .left_wrap .card_1 .mission_icon { position: absolute; right: 5%; }
+        .section_2 .left_wrap .card_1 .mission_icon svg { width: 3.13dvw; height: 4.69dvw; }
+        .section_2 .left_wrap .card_1 .mission_icon svg path { fill: var(--white); }
+        .section_2 .left_wrap .card_1 p { color: var(--white); font-size: 0.83dvw; }
+        .section_2 .left_wrap .card_2 { background-color: #32978D; padding: 5%; }
+        .section_2 .left_wrap .card_2 h5 { margin: 0; color: var(--white); font-size: 0.94dvw; }
+        .section_2 .left_wrap .card_2 h6 { margin: 0; color: var(--white); font-size: 1.67dvw; font-family: 'Lato-Bold'; }
+        .section_2 .left_wrap .card_2 p { color: var(--white); font-size: 0.83dvw; margin-top: 3.65dvw; }
+        .section_2 .left_wrap .card_2 .read_more_btn { display: flex; align-items: center; justify-content: center; gap: 0.78dvw; padding: 0.26dvw 1.30dvw; width: fit-content; background-color: var(--white); border-radius: 5.21dvw; color: var(--black); text-decoration: underline; font-size: 0.83dvw; font-family: 'Figtree'; }
+        .section_2 .left_wrap .card_2 .read_more_btn svg { width: 0.94dvw; height: 0.94dvw; }
+        .section_2 .left_wrap .card_2 .read_more_btn svg path { fill: var(--black); stroke: var(--black); stroke-width: 0.2; }
+        .section_2 .right_wrap { width: 50%; display: flex; flex: 1; }
+        .section_2 .right_wrap .card_3 { display: flex; flex-direction: column; justify-content: space-between; background-color: #FFF7ED; }
+        .section_2 .right_wrap .card_3 .text_content { padding: 5%; }
+        .section_2 .right_wrap .card_3 .text_content h5 { margin: 0; color: var(--black); font-size: 0.94dvw; }
+        .section_2 .right_wrap .card_3 .text_content h6 { margin: 0; color: var(--black); font-size: 1.67dvw; font-family: 'Lato-Bold'; }
+        .section_2 .right_wrap .card_3 .text_content p { color: var(--black); font-size: 0.83dvw; margin-top: 6.35dvh; }
+        .section_2 .right_wrap .card_3 .text_content .read_more_btn { display: flex; align-items: center; justify-content: center; gap: 0.78dvw; padding: 0.26dvw 1.30dvw; width: fit-content; background-color: var(--dark_green); border-radius: 5.21dvw; color: var(--white); text-decoration: underline; font-size: 0.83dvw; font-family: 'Figtree'; }
+        .section_2 .right_wrap .card_3 .text_content .read_more_btn svg { width: 0.94dvw; height: 0.94dvw; }
+        .section_2 .right_wrap .card_3 .text_content .read_more_btn path { fill: var(--white); stroke: var(--white); stroke-width: 0.2; }
+        .section_2 .right_wrap .card_3 .image_wrap { display: flex; }
+        .section_2 .right_wrap .card_3 .image_wrap img { width: 25%; aspect-ratio: 9/16; object-fit: cover; }
+        @media (max-width: 768px) {
+            .section_2 { flex-direction: column; gap: 4.17dvw; margin: 15% 5% 10% 5%; }
+            .section_2 h2 { font-size: 10.00dvw; }
+            .section_2 .left_wrap { width: 100%; gap: 4.17dvw; }
+            .section_2 .left_wrap .card_1 { padding: 6% 8%; }
+            .section_2 .left_wrap .card_1 h5 { font-size: 4.58dvw; }
+            .section_2 .left_wrap .card_1 h6 { font-size: 6.67dvw; margin-bottom: 4.17dvw; }
+            .section_2 .left_wrap .card_1 .mission_icon svg { width: 9.79dvw; height: 14.58dvw; }
+            .section_2 .left_wrap .card_1 p { font-size: 2.92dvw; }
+            .section_2 .left_wrap .card_2 { padding: 6% 8%; }
+            .section_2 .left_wrap .card_2 h5 { font-size: 4.58dvw; }
+            .section_2 .left_wrap .card_2 h6 { font-size: 6.67dvw; }
+            .section_2 .left_wrap .card_2 p { font-size: 2.92dvw; margin-top: 10.42dvw; }
+            .section_2 .left_wrap .card_2 .read_more_btn { gap: 1.56dvw; }
+            .section_2 .left_wrap .card_2 .read_more_btn { font-size: 2.92dvw; padding: 1.04dvw 5.21dvw; }
+            .section_2 .left_wrap .card_2 .read_more_btn svg { width: 2.71dvw; height: 2.71dvw; }
+            .section_2 .right_wrap { width: 100%; }
+            .section_2 .right_wrap .card_3 .text_content { padding: 6% 8% 12% 8%; }
+            .section_2 .right_wrap .card_3 .text_content h5 { font-size: 4.58dvw; }
+            .section_2 .right_wrap .card_3 .text_content h6 { font-size: 6.67dvw; }
+            .section_2 .right_wrap .card_3 .text_content p { font-size: 2.92dvw; margin-top: 4.17dvw; }
+            .section_2 .right_wrap .card_3 .text_content .read_more_btn { gap: 1.56dvw; font-size: 2.92dvw; padding: 1.04dvw 5.21dvw; }
+            .section_2 .right_wrap .card_3 .text_content .read_more_btn svg { width: 2.71dvw; height: 2.71dvw; }
+        }
+
+        .section_3 { display: flex; flex-direction: column; margin: 10%; }
+        .section_3 h2 { color: var(--black); font-size: 3.35dvw; }
+        .section_3 .card_wrap { display: flex; flex-wrap: wrap; gap: 2.08dvw; }
+        .section_3 .card_wrap .card { flex: 1 1 calc(33.33% - 2.08dvw); border-radius: 0.57dvw; overflow: hidden; }
+        .section_3 .card_wrap .card img { width: 100%; aspect-ratio: 4/2.8; object-fit: cover; border-radius: var(--card_border_radius); }
+        .section_3 .card_wrap .card .card_label { position: absolute; bottom: 0; display: flex; align-items: center; justify-content: start; width: 100%; padding: 0.78dvw 1.56dvw; background-color: var(--footer_primary_bg); }
+        .section_3 .card_wrap .card .card_label span { font-family: 'Lato-Bold'; font-size: 1.25dvw; color: var(--white); }
+        @media (max-width: 768px) {
+            .section_3 { margin: 15% 5%; }
+            .section_3 h2 { font-size: 10.00dvw; }
+            .section_3 .card_wrap .card { flex: 1 1 calc(50% - 3.13dvw); border-radius: 1.25dvw; }
+            .section_3 .card_wrap .card img { aspect-ratio: 4/3; }
+            .section_3 .card_wrap .card .card_label { padding: 2.08dvw 3.13dvw; }
+            .section_3 .card_wrap .card .card_label span { font-size: 2.50dvw; }
+        }
+
+        .section_4 { margin: 10%; height: 80dvh; }
+        .section_4 .card { height: 100%; background: url("Images/Assets/Background/Algae_bg.webp") no-repeat center center; background-size: cover; padding: 5%; }
+        .section_4 .card h2 { color: var(--white); font-size: 3.35dvw; }
+        .section_4 .card h5 { color: var(--white); font-size: 1.46dvw; font-family: 'Lato-Bold'; margin-top: 4.17dvw; margin-bottom: 1.82dvw; }
+        .section_4 .card p { color: var(--white); font-size: 0.94dvw; margin-bottom: 1.56dvw; }
+        .section_4 .card .more_details_btn { display: flex; align-items: center; justify-content: center; gap: 0.78dvw; padding: 0.26dvw 1.30dvw; width: fit-content; background-color: var(--white); border-radius: 5.21dvw; color: var(--black); text-decoration: underline; font-size: 0.83dvw; font-family: 'Figtree'; }
+        .section_4 .card .more_details_btn svg { width: 0.94dvw; height: 0.94dvw; }
+        .section_4 .card .more_details_btn svg path { fill: var(--black); stroke: var(--black); stroke-width: 0.2; }
+        @media (max-width: 768px) {
+            .section_4 { margin: 0 5% 5% 5%; height: auto; }
+            .section_4 .card { padding: 8%; }
+            .section_4 .card h2 { font-size: 6.67dvw; }
+            .section_4 .card h5 { font-size: 5.00dvw; margin-top: 12.50dvw; margin-bottom: 5.21dvw; }
+            .section_4 .card p { font-size: 3.13dvw; margin-bottom: 5.21dvw; }
+            .section_4 .card .more_details_btn { gap: 1.56dvw; font-size: 2.92dvw; padding: 1.04dvw 5.21dvw; }
+            .section_4 .card .more_details_btn svg { width: 2.71dvw; height: 2.71dvw; }
+        }
+
+        .section_5 { display: flex; flex-direction: row; align-items: stretch; justify-content: space-between; gap: 2.08dvw; margin: 10%; }
+        .section_5 .card_1 { padding: 4% 3% 3% 3%; width: 100%; background-color: var(--primary); }
+        .section_5 .card_2 { padding: 4% 3% 3% 3%; width: 100%; background-color: var(--footer_primary_bg); }
+        .section_5 .card_1 svg { width: 2.19dvw; height: 2.19dvw; }
+        .section_5 .card_2 svg { width: 2.08dvw; height: 2.08dvw; }
+        .section_5 .card_1 svg path, .section_5 .card_2 svg path { fill: var(--white); }
+        .section_5 .card_1 h5, .section_5 .card_2 h5 { color: var(--white); font-size: 0.94dvw; margin-top: 1.04dvw; }
+        .section_5 .card_1 h6, .section_5 .card_2 h6 { color: var(--white); font-size: 1.67dvw; font-family: 'Lato-Bold'; }
+        .section_5 .card_1 p, .section_5 .card_2 p { color: var(--white); font-size: 0.83dvw; margin-top: 2.08dvw; }
+        .section_5 .card_1 .read_more_btn, .section_5 .card_2 .read_more_btn { display: flex; align-items: center; justify-content: center; gap: 0.78dvw; padding: 0.26dvw 1.30dvw; width: fit-content; background-color: var(--white); border-radius: 5.21dvw; color: var(--black); text-decoration: underline; font-size: 0.83dvw; font-family: 'Figtree'; }
+        .section_5 .card_1 .read_more_btn svg, .section_5 .card_2 .read_more_btn svg { width: 0.94dvw; height: 0.94dvw; }
+        .section_5 .card_1 .read_more_btn svg path, .section_5 .card_2 .read_more_btn svg path { fill: var(--black); stroke: var(--black); stroke-width: 0.2; }
+        @media (max-width: 768px) {
+            .section_5 { flex-direction: column; gap: 5.02dvw; margin: 5%; }
+            .section_5 .card_1, .section_5 .card_2 { padding: 8%; }
+            .section_5 .card_1 svg { width: 8.75dvw; height: 8.75dvw; }
+            .section_5 .card_2 svg { width: 8.33dvw; height: 8.33dvw; }
+            .section_5 .card_1 h5, .section_5 .card_2 h5 { font-size: 4.58dvw; margin-top: 2.08dvw; }
+            .section_5 .card_1 h6, .section_5 .card_2 h6 { font-size: 6.67dvw; }
+            .section_5 .card_1 p, .section_5 .card_2 p { font-size: 2.92dvw; margin-top: 5.21dvw; }
+            .section_5 .card_1 .read_more_btn, .section_5 .card_2 .read_more_btn { gap: 1.56dvw; font-size: 2.92dvw; padding: 1.04dvw 5.21dvw; }
+            .section_5 .card_1 .read_more_btn svg, .section_5 .card_2 .read_more_btn svg { width: 2.71dvw; height: 2.71dvw; }
+        }
+
+        .section_6 { margin: 10%; }
+        .section_6 .card { display: flex; flex-direction: row; align-items: start; justify-content: center; gap: 2.08dvw; padding: 5%; background-color: var(--cream); }
+        .section_6 .card .left_wrap { width: 100%; }
+        .section_6 .card .left_wrap h2 { color: var(--black); font-size: 3.35dvw; margin: 0; }
+        .section_6 .card .left_wrap p { color: var(--black); margin: 1.04dvw 0; width: 80%; }
+        .section_6 .card .right_wrap { width: 100%; }
+        .section_6 .card .right_wrap .text_content { display: flex; flex-direction: column; padding: 1.04dvw 1.56dvw; border-bottom: 0.11dvw solid var(--black); }
+        .section_6 .card .right_wrap .text_content:nth-child(1) { padding-top: 0; }
+        .section_6 .card .right_wrap .text_content:nth-last-child(1) { border-bottom: none; padding-bottom: 0; }
+        .section_6 .card .right_wrap .text_content .date { margin-bottom: 0.26dvw; font-size: 0.63dvw; color: var(--black); }
+        .section_6 .card .right_wrap .text_content .category { margin-bottom: 0.26dvw; font-size: 0.63dvw; color: var(--white); background-color: var(--black); width: fit-content; padding: 0.11dvw 1.04dvw; }
+        .section_6 .card .right_wrap .text_content p { font-size: 0.83dvw; columns: var(--black); }
+        .section_6 .card .right_wrap .text_content .pill_btn_darkgreen { font-size: 0.63dvw; gap: 0.42dvw; }
+        .section_6 .card .right_wrap .text_content .pill_btn_darkgreen svg { width: 0.78dvw; height: 0.78dvw; }
+        @media (max-width: 768px) {
+            .section_6 { margin: 5%; }
+            .section_6 .card { flex-direction: column; padding: 8% 5%; }
+            .section_6 .card .left_wrap { margin: 0 4.17dvw 8.33dvw 4.17dvw; }
+            .section_6 .card .left_wrap h2 { font-size: 10.00dvw; }
+            .section_6 .card .left_wrap p { font-size: 2.92dvw; width: 100%; margin: 3.13dvw 0; }
+            .section_6 .card .right_wrap .text_content { padding: 4.17dvw; border-bottom: 0.15dvw solid var(--black); }
+            .section_6 .card .right_wrap .text_content .date { margin-bottom: 1.04dvw; font-size: 2.50dvw; }
+            .section_6 .card .right_wrap .text_content .category { margin-bottom: 1.04dvw; font-size: 2.50dvw; padding: 0.42dvw 2.08dvw; }
+            .section_6 .card .right_wrap .text_content p { font-size: 2.92dvw; margin-bottom: 2.08dvw; }
+            .section_6 .card .right_wrap .text_content .pill_btn_darkgreen { font-size: 2.08dvw; gap: 1.67dvw; }
+            .section_6 .card .right_wrap .text_content .pill_btn_darkgreen svg { width: 2.50dvw; height: 2.50dvw; }
+        }
+
+        .section_7 { display: flex; flex-direction: row; align-items: stretch; gap: 2.08dvw; margin: 10%; }
+        .section_7 .left_wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; width: 100%; }
+        .section_7 .left_wrap h2 { color: var(--black); font-size: 3.35dvw; }
+        .section_7 .left_wrap .text_content { margin: 0.52dvw 0 1.04dvw 0; }
+        .section_7 .left_wrap .text_content p { color: var(--black); font-size: 1.25dvw; font-family: 'Lato-Bold'; margin: 0.52dvw 0 1.04dvw 0; }
+        .section_7 .left_wrap .pill_btn_darkgreen .iconic_svg { width: 1.46dvw; height: 1.46dvw; }
+        .section_7 .right_wrap { flex: 1; width: 100%; }
+        .section_7 .right_wrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+        @media (max-width: 768px) {
+            .section_7 { flex-direction: column; gap: 10.42dvw; margin: 20% 5% 15% 5%; }
+            .section_7 .left_wrap h2 { font-size: 10.00dvw; }
+            .section_7 .left_wrap .text_content { margin: 1.04dvw 0 5.21dvw 0; }
+            .section_7 .left_wrap .text_content p { font-size: 5.00dvw; }
+            .section_7 .left_wrap .pill_btn_darkgreen { padding: 2.08dvw 5.21dvw; }
+            .section_7 .left_wrap .pill_btn_darkgreen .iconic_svg { width: 5.21dvw; height: 5.21dvw; }
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+    body a{text-decoration: none;}
+
+    
+    header {position: fixed;width: 100%;z-index: 999;background-color: transparent;transition: all 0.3s ease;}
+    header #navbar {display: flex;align-items: center;justify-content: space-between;width: 100%;padding: 1.56dvw 10%;transition: padding 0.3s ease;}
+    header #navbar .logo {cursor: pointer;}
+    header #navbar .logo img {width: auto;height: 3.13dvw;object-fit: contain;transition: height 0.3s ease;}
+    header #navbar .nav {flex: 1;display: flex;align-items: center;justify-content: start;padding: 0 2%;}
+    header #navbar .nav ul {display: flex;flex-direction: row;list-style: none;margin: 0;padding: 0;}
+    header #navbar .nav ul li {display: flex;width: max-content;}
+    header #navbar .nav ul li .nav-link {font-size: 0.83dvw;color: var(--black);transition: font-size 0.3s ease, color 0.3s ease;}
+    header #navbar .nav ul li .nav-link:hover {color: var(--white);text-decoration: underline;}
+    header #navbar .buttons_wrap {display: flex;align-items: center;justify-content: center;gap: 0.52dvw;transition: gap 0.3s ease;}
+    header #navbar .buttons_wrap .pill_iconic_btn_white {background-color: transparent;}
+    header #navbar .buttons_wrap #searchBtn {background: none;border: none;cursor: pointer;}
+    header #navbar .buttons_wrap #searchBtn:hover {filter: drop-shadow(0 0.11dvw 0.42dvw rgba(0,0,0,0.3));}
+    header #navbar .buttons_wrap #searchBtn svg {width: 2.08dvw;height: 2.08dvw;transition: width 0.3s ease, height 0.3s ease;}
+    header #navbar .buttons_wrap #searchBtn svg path {fill: var(--black);}
+    header #navbar .hamburger_btn {display: none;align-items: center;justify-content: center;background-color: transparent;border: none;cursor: pointer;}
+    header #navbar .hamburger_btn:hover {filter: drop-shadow(0 0.11dvw 0.42dvw rgba(0,0,0,0.3));}
+    header #navbar .hamburger_btn:focus {outline: none;}
+    header #navbar .hamburger_btn svg {width: 4.17dvw;height: 4.17dvw;fill: var(--black);transition: width 0.3s ease, height 0.3s ease;}
+    header #navbar .hamburger_btn svg path {transition: fill 0.3s ease;}
+
+    /* Compact header state */
+    header.compact {background-color: var(--primary_bg);}
+    header.compact #navbar {padding: 0.78dvw 10%;}
+    header.compact #navbar .logo img {height: 2.08dvw;}
+    header.compact #navbar .nav ul li .nav-link {font-size: 0.63dvw;}
+    header.compact #navbar .buttons_wrap {gap: 0.31dvw;}
+    header.compact #navbar .buttons_wrap #searchBtn svg {width: 1.56dvw;height: 1.56dvw;}
+    header.compact #navbar .hamburger_btn svg {width: 3.13dvw;height: 3.13dvw;}
+
+    @media (max-width: 768px) {
+        header {height: 20dvw;transition: height 0.3s ease;}
+        header #navbar {height: 100%;padding: 0 5%;transition: padding 0.3s ease;}
+        header #navbar .logo {display: flex;align-items: center;height: 40%;}
+        header #navbar .logo img {width: auto;height: 100%;object-fit: contain;transition: height 0.3s ease;}
+        header #navbar .nav {position: absolute;z-index: -1;display: flex;flex-direction: column;align-items: start;top: 0;left: 0;width: 100%;height: 100dvh;max-height: 0;background-color: var(--primary_bg);overflow: hidden;opacity: 0;transition: max-height 0.5s ease-in, opacity 1s ease-in-out;}
+        header #navbar .nav.active {max-height: 100dvh;opacity: 1;}
+        header #navbar .nav ul {flex-direction: column;align-items: flex-start;margin-top: 20dvw;}
+        header #navbar .nav ul li {width: 100%;padding: 1.56dvw 0;}
+        header #navbar .nav ul li .nav-link {font-size: 3.33dvw;color: var(--white);transition: font-size 0.3s ease, color 0.3s ease;}
+        header #navbar .buttons_wrap {position: absolute;display: flex;flex-direction: column;align-items: start;gap: 4.17dvw;top: 95dvw;left: 0;padding: 0 5%;width: 100%;opacity: 0;transition: opacity 0.2s ease, gap 0.3s ease, top 0.3s ease;}
+        header #navbar .buttons_wrap .pill_iconic_btn_darkgreen {width: 100%;}
+        header #navbar .buttons_wrap .pill_iconic_btn_white {width: 100%;background-color: var(--white);}
+        header #navbar .buttons_wrap #searchBtn svg {width: 6.25dvw;height: 6.25dvw;transition: width 0.3s ease, height 0.3s ease;}
+        header #navbar .buttons_wrap #searchBtn svg path {fill: var(--white);}
+        header #navbar .hamburger_btn {display: flex;}
+
+        /* Compact state for mobile */
+        header.compact {height: 10.41dvw;}
+        header.compact #navbar {padding: 0 5%;}
+        header.compact #navbar .logo img {height: 80%;}
+        header.compact #navbar .nav ul {margin-top: 10.41dvw;}
+        header.compact #navbar .nav ul li .nav-link {font-size: 2.5dvw;}
+        header.compact #navbar .buttons_wrap {gap: 3.13dvw;top: 75dvw;}
+        header.compact #navbar .buttons_wrap #searchBtn svg {width: 4.69dvw;height: 4.69dvw;}
+    }
+</style>
+
+<header>
+    <div id="navbar">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <img src="/Images/Assets/Logo/Terra_Plus_logo.png" alt="Logo">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a class="nav-link" href="/about-us">私たちについて</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#" onclick="comingSoon()">製品</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/evidences">証拠</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/sustainability">持続可能性</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/news">ニュース</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/contact-us">お問い合わせ</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Buttons Wrap -->
+        <div class="buttons_wrap">
+            <button type="button" onclick="comingSoon()" class="btn pill_iconic_btn_darkgreen">
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="iconic_svg" d="M6.56311 17.9689C6.56311 19.0646 5.68653 19.9611 4.61515 19.9611C3.54378 19.9611 2.67694 19.0646 2.67694 17.9689C2.67694 16.8732 3.54378 15.9767 4.61515 15.9767C5.68653 15.9767 6.56311 16.8732 6.56311 17.9689ZM14.3549 15.9767C13.2836 15.9767 12.4167 16.8732 12.4167 17.9689C12.4167 19.0646 13.2836 19.9611 14.3549 19.9611C15.4263 19.9611 16.3029 19.0646 16.3029 17.9689C16.3029 16.8732 15.4263 15.9767 14.3549 15.9767ZM14.7406 10.9961C15.1838 10.996 15.6136 10.8414 15.9593 10.5578C16.3049 10.2743 16.5457 9.8786 16.6418 9.4362L18.2509 3.0272H4.61515V2.03109C4.61515 1.50271 4.40992 0.995982 4.04461 0.622367C3.6793 0.248751 3.18383 0.0388565 2.6672 0.0388565H0.719238V2.03109H2.6672V12.9883C2.6672 13.5167 2.87243 14.0234 3.23774 14.3971C3.60305 14.7707 4.09852 14.9806 4.61515 14.9806H16.3029C16.3029 14.4522 16.0977 13.9455 15.7324 13.5719C15.367 13.1982 14.8716 12.9883 14.3549 12.9883H4.61515V10.9961H14.7406Z" />
+                </svg>
+                今すぐ購入
+                <svg class="right_svg" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" fill="white" stroke="white" stroke-width="0.5"/>
+                    <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                    <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z"/>
+                </svg>
+            </button>
+            <button type="button" class="btn pill_iconic_btn_white dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="iconic_svg" d="M13.6489 2.135C12.5572 1.95247 11.4427 1.95247 10.3509 2.135C10.0149 2.591 9.68694 3.18 9.38794 3.899C9.10594 4.575 8.85794 5.345 8.65194 6.19C9.76335 6.06214 10.8812 5.9987 11.9999 6C13.1549 6 14.2779 6.066 15.3479 6.19C15.1622 5.40889 14.9165 4.64328 14.6129 3.9C14.3129 3.18 13.9849 2.59 13.6489 2.135ZM15.7419 8.258C14.5021 8.08536 13.2517 7.99915 11.9999 8C10.6819 8 9.42394 8.092 8.25794 8.258C8.0853 9.49784 7.99909 10.7482 7.99994 12C7.99994 13.318 8.09194 14.576 8.25794 15.742C9.42394 15.908 10.6819 16 11.9999 16C13.3179 16 14.5759 15.909 15.7419 15.742C15.9079 14.576 15.9999 13.318 15.9999 12C15.9999 10.682 15.9089 9.424 15.7419 8.258ZM17.8099 15.348C17.9339 14.278 17.9999 13.155 17.9999 12C18.0012 10.8813 17.9378 9.7634 17.8099 8.652C18.5911 8.83803 19.3567 9.08409 20.0999 9.388C20.8199 9.688 21.4099 10.015 21.8649 10.351C22.0475 11.4428 22.0475 12.5572 21.8649 13.649C21.4099 13.985 20.8199 14.313 20.1009 14.613C19.4249 14.894 18.6549 15.143 17.8099 15.348ZM15.3479 17.81C14.2365 17.9379 13.1187 18.0013 11.9999 18C10.8812 18.0013 9.76335 17.9379 8.65194 17.81C8.85794 18.655 9.10594 19.425 9.38794 20.1C9.68794 20.82 10.0149 21.41 10.3509 21.865C11.4427 22.0475 12.5572 22.0475 13.6489 21.865C13.9849 21.41 14.3129 20.82 14.6129 20.101C14.8939 19.425 15.1429 18.655 15.3479 17.81ZM16.4139 20.976L16.4589 20.87C16.8739 19.874 17.2169 18.727 17.4729 17.473C18.5003 17.2693 19.5091 16.981 20.4889 16.611L20.9759 16.414C19.9986 18.3951 18.3951 19.9986 16.4139 20.976ZM7.58594 20.976L7.54094 20.87C7.12594 19.874 6.78294 18.727 6.52694 17.473C5.49957 17.2693 4.4908 16.981 3.51094 16.611L3.02394 16.414C4.00131 18.3951 5.6048 19.9986 7.58594 20.976ZM6.18994 15.348C6.06209 14.2366 5.99865 13.1187 5.99994 12C5.99994 10.845 6.06594 9.722 6.18994 8.652C5.34494 8.858 4.57494 9.106 3.89994 9.388C3.17994 9.688 2.58994 10.015 2.13494 10.351C1.95241 11.4428 1.95241 12.5572 2.13494 13.649C2.59094 13.985 3.17994 14.313 3.89894 14.613C4.57494 14.894 5.34494 15.143 6.18994 15.348ZM6.52694 6.528C6.73088 5.49992 7.01953 4.49047 7.38994 3.51L7.58694 3.023C5.6058 4.00036 4.00231 5.60385 3.02494 7.585L3.13094 7.54C4.12694 7.125 5.27394 6.782 6.52794 6.526M17.4739 6.526C17.2703 5.49828 16.982 4.48918 16.6119 3.509L16.4149 3.022C18.3961 3.99936 19.9996 5.60285 20.9769 7.584L20.8709 7.539C19.8749 7.124 18.7279 6.782 17.4739 6.526Z" />
+                </svg>
+                
+                <span style="text-decoration: underline;">Japanese</span>
+                
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="/change-language?lang=JP">Japanese</a></li>
+                <li><a class="dropdown-item" href="/change-language?lang=ENG">English</a></li>
+                <li><a class="dropdown-item" href="/change-language?lang=CN">Chinese</a></li>
+                <li><a class="dropdown-item" href="/change-language?lang=BM">Malay</a></li>
+            </ul>
+            <!-- <button type="button" id="searchBtn">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.0122 8.99902C14.0122 10.3251 13.4854 11.5969 12.5477 12.5346C11.6101 13.4722 10.3383 13.999 9.01221 13.999C7.68612 13.999 6.41436 13.4722 5.47667 12.5346C4.53899 11.5969 4.01221 10.3251 4.01221 8.99902C4.01221 7.67294 4.53899 6.40117 5.47667 5.46349C6.41436 4.52581 7.68612 3.99902 9.01221 3.99902C10.3383 3.99902 11.6101 4.52581 12.5477 5.46349C13.4854 6.40117 14.0122 7.67294 14.0122 8.99902Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0122071 8.99903C0.0123627 7.5614 0.356908 6.14473 1.017 4.86761C1.67709 3.59049 2.63352 2.49007 3.80623 1.65849C4.97893 0.826908 6.33378 0.288354 7.75737 0.0879101C9.18095 -0.112533 10.6318 0.0309677 11.9886 0.5064C13.3453 0.981833 14.5684 1.77536 15.5555 2.82056C16.5426 3.86576 17.2649 5.13221 17.662 6.5139C18.0591 7.89558 18.1195 9.3523 17.838 10.7621C17.5566 12.1719 16.9414 13.4938 16.0442 14.617L19.7192 18.292C19.9014 18.4806 20.0022 18.7332 19.9999 18.9954C19.9976 19.2576 19.8924 19.5084 19.707 19.6938C19.5216 19.8793 19.2708 19.9844 19.0086 19.9867C18.7464 19.989 18.4938 19.8882 18.3052 19.706L14.6302 16.031C13.3061 17.089 11.7101 17.7516 10.026 17.9425C8.34187 18.1334 6.63807 17.8449 5.1107 17.1102C3.58334 16.3754 2.29449 15.2243 1.3925 13.7894C0.490515 12.3544 0.0120605 10.6939 0.0122071 8.99903ZM9.01221 1.99903C8.09295 1.99903 7.1827 2.18009 6.33342 2.53187C5.48414 2.88365 4.71247 3.39927 4.06246 4.04928C3.41245 4.69929 2.89683 5.47096 2.54505 6.32024C2.19327 7.16952 2.01221 8.07977 2.01221 8.99903C2.01221 9.91828 2.19327 10.8285 2.54505 11.6778C2.89683 12.5271 3.41245 13.2988 4.06246 13.9488C4.71247 14.5988 5.48414 15.1144 6.33342 15.4662C7.1827 15.818 8.09295 15.999 9.01221 15.999C10.8687 15.999 12.6492 15.2615 13.962 13.9488C15.2747 12.636 16.0122 10.8555 16.0122 8.99903C16.0122 7.14251 15.2747 5.36203 13.962 4.04928C12.6492 2.73652 10.8687 1.99903 9.01221 1.99903Z" />
+                </svg>
+            </button> -->
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button type="button" class="hamburger_btn">
+            <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.66634 0.546875C2.11381 0.546875 1.5839 0.766369 1.1932 1.15707C0.802502 1.54777 0.583008 2.07767 0.583008 2.63021C0.583008 3.18274 0.802502 3.71265 1.1932 4.10335C1.5839 4.49405 2.11381 4.71354 2.66634 4.71354H19.333C19.8855 4.71354 20.4154 4.49405 20.8062 4.10335C21.1969 3.71265 21.4163 3.18274 21.4163 2.63021C21.4163 2.07767 21.1969 1.54777 20.8062 1.15707C20.4154 0.766369 19.8855 0.546875 19.333 0.546875H2.66634ZM0.583008 10.999C0.583008 10.4464 0.802502 9.91652 1.1932 9.52582C1.5839 9.13512 2.11381 8.91563 2.66634 8.91563H19.333C19.8855 8.91563 20.4154 9.13512 20.8062 9.52582C21.1969 9.91652 21.4163 10.4464 21.4163 10.999C21.4163 11.5515 21.1969 12.0814 20.8062 12.4721C20.4154 12.8628 19.8855 13.0823 19.333 13.0823H2.66634C2.11381 13.0823 1.5839 12.8628 1.1932 12.4721C0.802502 12.0814 0.583008 11.5515 0.583008 10.999ZM2.66634 17.2844C2.11381 17.2844 1.5839 17.5039 1.1932 17.8946C0.802502 18.2853 0.583008 18.8152 0.583008 19.3677C0.583008 19.9202 0.802502 20.4501 1.1932 20.8408C1.5839 21.2315 2.11381 21.451 2.66634 21.451H19.333C19.8855 21.451 20.4154 21.2315 20.8062 20.8408C21.1969 20.4501 21.4163 19.9202 21.4163 19.3677C21.4163 18.8152 21.1969 18.2853 20.8062 17.8946C20.4154 17.5039 19.8855 17.2844 19.333 17.2844H2.66634Z" />
+            </svg>
+        </button>
+    </div>
+</header>
+
+<script>
+    document.querySelector('.hamburger_btn').addEventListener('click', function() {
+        const nav = document.querySelector('.nav');
+        const buttonsWrap = document.querySelector('.buttons_wrap');
+        nav.classList.toggle('active');
+        if (nav.classList.contains('active')) {
+            setTimeout(() => {
+                buttonsWrap.style.opacity = '1';
+            }, 400);
+        } else {
+            buttonsWrap.style.opacity = '0';
+        }
+    });
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const scrollPosition = window.scrollY; // Get current scroll position
+
+        // Toggle compact class based on scroll position
+        if (scrollPosition > 50) { // Adjust threshold as needed
+            header.classList.add('compact');
+        } else {
+            header.classList.remove('compact');
+        }
+    });
+</script>
+
+    <!-- Section 1 -->
+    <section class="section section_1" id="section_1">
+        <div class="card">
+            <div class="title_wrap">
+                <h5>微細藻類を<br />持続可能な<br />ソリューションに<br />変える</h5>
+
+                <p>食品から美容まで、グリーンイノベーションで産業を牽引。</p>
+            </div>
+            <div class="image_wrap">
+                <img src="/Images/Home/Section_1/Section_1_img.webp" alt="Microalgae Solutions">
+            </div>
+            <div id="scroll_down">
+                <span>スクロールダウン</span>
+                <svg viewBox="0 0 23 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.7247 21.6604C10.936 21.8779 11.2224 22 11.521 22C11.8196 22 12.106 21.8779 12.3172 21.6604L15.6976 18.1783C15.8966 17.9582 16.005 17.6671 15.9998 17.3662C15.9947 17.0654 15.8764 16.7784 15.67 16.5656C15.4635 16.3529 15.185 16.231 14.8931 16.2257C14.6012 16.2204 14.3187 16.3321 14.1051 16.5372L11.521 19.1956L8.93689 16.5341C8.8329 16.4232 8.70852 16.3348 8.57102 16.274C8.43352 16.2132 8.28565 16.1813 8.13604 16.18C7.98643 16.1787 7.83807 16.2082 7.69962 16.2667C7.56117 16.3251 7.4354 16.4114 7.32965 16.5205C7.22391 16.6295 7.1403 16.7592 7.08371 16.902C7.02712 17.0447 6.99868 17.1976 7.00005 17.3518C7.00142 17.506 7.03257 17.6583 7.09169 17.8C7.15081 17.9416 7.2367 18.0697 7.34437 18.1768L10.7247 21.6604ZM11.521 10.4772C11.2022 10.4772 10.8965 10.3467 10.6711 10.1145C10.4457 9.88217 10.3191 9.56712 10.3191 9.23862C10.3191 8.91012 10.4457 8.59507 10.6711 8.36278C10.8965 8.1305 11.2022 8 11.521 8C11.8397 8 12.1454 8.1305 12.3708 8.36278C12.5962 8.59507 12.7229 8.91012 12.7229 9.23862C12.7229 9.56712 12.5962 9.88217 12.3708 10.1145C12.1454 10.3467 11.8397 10.4772 11.521 10.4772ZM10.3191 13.5986C10.3191 13.7612 10.3502 13.9223 10.4106 14.0725C10.471 14.2228 10.5595 14.3594 10.6711 14.4744C10.7827 14.5894 10.9152 14.6806 11.061 14.7429C11.2069 14.8051 11.3631 14.8372 11.521 14.8372C11.6788 14.8372 11.8351 14.8051 11.9809 14.7429C12.1267 14.6806 12.2592 14.5894 12.3708 14.4744C12.4825 14.3594 12.571 14.2228 12.6314 14.0725C12.6918 13.9223 12.7229 13.7612 12.7229 13.5986C12.7229 13.27 12.5962 12.955 12.3708 12.7227C12.1454 12.4904 11.8397 12.3599 11.521 12.3599C11.2022 12.3599 10.8965 12.4904 10.6711 12.7227C10.4457 12.955 10.3191 13.27 10.3191 13.5986Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 0C8.45001 0 5.52494 1.18526 3.36827 3.29505C1.2116 5.40483 0 8.26632 0 11.25V18.75C0 21.7337 1.2116 24.5952 3.36827 26.705C5.52494 28.8147 8.45001 30 11.5 30C14.55 30 17.4751 28.8147 19.6317 26.705C21.7884 24.5952 23 21.7337 23 18.75V11.25C23 8.26632 21.7884 5.40483 19.6317 3.29505C17.4751 1.18526 14.55 0 11.5 0ZM2.3 11.25C2.3 8.86305 3.26928 6.57387 4.99462 4.88604C6.71995 3.19821 9.06001 2.25 11.5 2.25C13.94 2.25 16.28 3.19821 18.0054 4.88604C19.7307 6.57387 20.7 8.86305 20.7 11.25V18.75C20.7 21.1369 19.7307 23.4261 18.0054 25.114C16.28 26.8018 13.94 27.75 11.5 27.75C9.06001 27.75 6.71995 26.8018 4.99462 25.114C3.26928 23.4261 2.3 21.1369 2.3 18.75V11.25Z" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section section_2" id="section_2">
+        <div class="left_wrap">
+            <h2>私たちについて</h2>
+            <div class="card card_1">
+                <h5>ミッション</h5>
+                <h6>最古の植物, <br class="d-block d-md-none" />最新の力</h6>
+                <div class="mission_icon">
+                    <svg viewBox="0 0 47 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.5527 50.0805L27.1579 50.1521L24.61 51.4061L23.8924 51.5494L23.39 51.4061L20.8421 50.1521C20.4593 50.0327 20.1722 50.0924 19.9809 50.3312L19.8373 50.6895L19.2273 66.0233L19.4067 66.7398L19.7656 67.2056L23.4976 69.8567L24.0359 70L24.4665 69.8567L28.1986 67.2056L28.6292 66.6323L28.7727 66.0233L28.1627 50.7253C28.067 50.3432 27.8637 50.1282 27.5527 50.0805ZM37.0622 46.0321L36.5957 46.1037L29.9569 49.4356L29.5981 49.7939L29.4904 50.188L30.1364 65.5934L30.3158 66.0233L30.6029 66.274L37.8158 69.6059C38.2703 69.7253 38.6172 69.6298 38.8565 69.3193L39 68.8178L37.7799 46.8203C37.6603 46.3903 37.4211 46.1276 37.0622 46.0321ZM11.4043 46.1037C11.2462 46.008 11.0571 45.977 10.8766 46.0171C10.6961 46.0571 10.5381 46.1652 10.4354 46.3187L10.2201 46.8203L9 68.8178C9.02392 69.2477 9.22728 69.5343 9.61006 69.6776L10.1483 69.6059L17.3612 66.274L17.7201 65.9874L17.8636 65.5934L18.4737 50.188L18.366 49.7581L18.0072 49.3998L11.4043 46.1037Z" />
+                        <path d="M23.5 0.57428C25.6056 0.57428 27.6454 0.85158 29.5865 1.37093L24.5904 6.36468C24.2114 6.74522 23.8771 7.16783 23.594 7.62428H23.5C20.2465 7.62428 17.0661 8.58906 14.3609 10.3966C11.6557 12.2042 9.54724 14.7733 8.30218 17.7791C7.05712 20.785 6.73135 24.0925 7.36608 27.2835C8.00081 30.4745 9.56752 33.4056 11.8681 35.7062C14.1687 38.0068 17.0998 39.5735 20.2908 40.2082C23.4818 40.8429 26.7893 40.5172 29.7951 39.2721C32.801 38.027 35.3701 35.9186 37.1777 33.2134C38.9852 30.5082 39.95 27.3278 39.95 24.0743V23.9803C40.4043 23.6983 40.8234 23.3654 41.2072 22.9815L46.2033 17.9878C46.7227 19.9289 47 21.9687 47 24.0743C47 37.0533 36.479 47.5743 23.5 47.5743C10.521 47.5743 0 37.0533 0 24.0743C0 11.0952 10.521 0.57428 23.5 0.57428ZM22.5271 12.3642C22.5271 14.3641 22.4284 16.3921 22.5365 18.3896L21.2675 19.6586C20.831 20.0952 20.4847 20.6134 20.2485 21.1837C20.0122 21.7541 19.8906 22.3654 19.8906 22.9827C19.8906 23.6 20.0122 24.2113 20.2485 24.7817C20.4847 25.352 20.831 25.8703 21.2675 26.3068C21.704 26.7433 22.2223 27.0896 22.7926 27.3258C23.3629 27.5621 23.9742 27.6837 24.5916 27.6837C25.2089 27.6837 25.8202 27.5621 26.3905 27.3258C26.9609 27.0896 27.4791 26.7433 27.9156 26.3068L29.1846 25.0378C31.1821 25.1459 33.2078 25.0472 35.21 25.0472C35.0244 27.2805 34.204 29.4141 32.8455 31.1964C31.4871 32.9788 29.6473 34.3355 27.5431 35.1065C25.4389 35.8775 23.1581 36.0307 20.9697 35.5481C18.7813 35.0654 16.7766 33.967 15.1919 32.3824C13.6073 30.7977 12.5089 28.793 12.0262 26.6046C11.5435 24.4162 11.6967 22.1354 12.4678 20.0312C13.2388 17.927 14.5955 16.0872 16.3778 14.7287C18.1602 13.3703 20.2938 12.5499 22.5271 12.3642ZM38.7844 0.87273C39.2133 1.05058 39.58 1.35151 39.838 1.73755C40.0961 2.12359 40.234 2.57743 40.2343 3.04178V7.34228H44.5325C44.9972 7.34238 45.4515 7.48026 45.8378 7.73849C46.2242 7.99671 46.5253 8.3637 46.7031 8.79304C46.881 9.22239 46.9275 9.69481 46.8369 10.1506C46.7462 10.6064 46.5225 11.0251 46.1939 11.3537L37.882 19.6563C37.4414 20.097 36.8438 20.3447 36.2206 20.3448H30.55L26.2542 24.643C25.8132 25.0839 25.2152 25.3317 24.5916 25.3317C23.968 25.3317 23.3699 25.0839 22.9289 24.643C22.488 24.202 22.2403 23.604 22.2403 22.9804C22.2403 22.3567 22.488 21.7587 22.9289 21.3177L27.2271 17.0243V11.3514C27.2269 11.0424 27.2875 10.7364 27.4057 10.4509C27.5238 10.1654 27.6971 9.90603 27.9156 9.68758L36.2229 1.38033C36.5515 1.05149 36.9703 0.827512 37.4263 0.736739C37.8822 0.645965 38.3549 0.692473 38.7844 0.87038" />
+                    </svg>
+                </div>
+                <div style="margin-top: 2.08dvw;">
+                    <p>地球誕生の時から存在する「植物」で世界を満たす。</p>
+                    <p>食品、美容、健康、そして環境をサポートする新しい循環の形を提供します。</p>
+                    <p>「不足するものを奪い合う時代」から「育てて満たす時代」へ。</p>
+                    <p class="m-0">あなたと地球の両方が満たされるシステムを創造します。</p>
+                </div>
+            </div>
+            <div class="card card_2">
+                <h5>グループ概要</h5>
+                <h6>イノベーションの包括的エコシステム</h6>
+                <p>Terra Plusは、持続可能性、バイオテクノロジー、そして未来志向の産業への共通のコミットメントで結ばれた、より広範な企業グループの一部です。私たちは一緒に、藻類の栽培から原料処理、そして世界的な流通まで、イノベーションを推進しています。</p>
+                <a href="/about-us/group-overview" class="btn read_more_btn">
+                    続きを読む
+                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" />
+                        <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                        <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="right_wrap">
+            <div class="card card_3">
+                <div class="text_content">
+                    <h5>事業概要</h5>
+                    <h6>原料開発部門</h6>
+                    <p>私たちは藻類由来の完全有機材料を開発・製造し、食品、化粧品、工業製品、ペットケア、水産業、農業など幅広い産業に適用可能な次世代原料として提供しています。持続可能な資源としての藻類の可能性を最大限に活用することで、環境責任と産業需要のバランスを取った革新的な材料の創造に取り組んでいます。</p>
+                    <a href="/about-us/raw-material" class="btn read_more_btn">
+                        続きを読む
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" />
+                            <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                            <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="image_wrap">
+                    <img src="/Images/About_Us/Animal_Feed/Animal_Feed_card_banner.webp" alt="Business Overview">
+                    <img src="/Images/About_Us/Cosmetic_Ingredients/Cosmetic_Ingredients_card_banner.webp" alt="Business Overview">
+                    <img src="/Images/About_Us/Agricultural/Agricultural_card_banner.webp" alt="Business Overview">
+                    <img src="/Images/About_Us/Industrial_Raw_Materials/Industrial_Raw_Materials_card_banner.webp" alt="Business Overview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3-->
+    <!-- <section class="section section_3" id="section_3">
+        <h2>私たちの製品</h2>
+        <div class="card_wrap">
+            <div class="card card_1">
+                <img src="/Images/Home/Section_3/Food_Ingredients.webp" alt="Food Ingredients">
+                <div class="card_label">
+                    <span>食品原料</span>
+                </div>
+            </div>
+            <div class="card card_2">
+                <img src="/Images/Home/Section_3/Industrial_Raw_Materials.webp" alt="Industrial Materials">
+                <div class="card_label">
+                    <span>工業材料</span>
+                </div>
+            </div>
+            <div class="card card_3">
+                <img src="/Images/Home/Section_3/Feed_Ingredients.webp" alt="Feed Ingredients">
+                <div class="card_label">
+                    <span>飼料原料</span>
+                </div>
+            </div>
+            <div class="card card_4">
+                <img src="/Images/Home/Section_3/Fertilizer_Ingredients.webp" alt="Fertilizer Ingredients">
+                <div class="card_label">
+                    <span>肥料原料</span>
+                </div>
+            </div>
+            <div class="card card_5">
+                <img src="/Images/Home/Section_3/Cosmetic_Ingredients.webp" alt="Cosmetic Ingredients">
+                <div class="card_label">
+                    <span>化粧品原料</span>
+                </div>
+            </div>
+            <div class="card card_6">
+                <img src="/Images/Home/Section_3/Pharmaceutical_Ingredients.webp" alt="Pharmaceutical Ingredients">
+                <div class="card_label">
+                    <span>医薬品原料</span>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Section 4 -->
+    <section class="section section_4" id="section_4">
+        <div class="card">
+            <h2>マザーベジタブルとは？</h2>
+            <h5>育てば育つほど、あなたと地球が満たされる。</h5>
+            <p>マザーベジタブルは、食品、美容、そして環境をサポートする未来の恵みです。あるものは食べ物となり、あるものは美しさを高め、あるものは空気を浄化して地球を癒します。人々と地球を化学物質から解放し、有機の恵みで健康を育み、CO₂削減に貢献します。30億年間その姿を保ち続け、すべての生命の起源である「地球誕生の時からの植物」が、これからの私たちの生き方を変えていきます。</p>
+            <button type="button" class="btn more_details_btn">
+                詳細はこちらをクリック
+                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" />
+                    <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                    <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="section section_5" id="section_5">
+        <div class="card card_1">
+            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4.19986C0 3.08599 0.442484 2.01774 1.23011 1.23011C2.01774 0.442484 3.08599 0 4.19986 0L37.7987 0C38.9126 0 39.9809 0.442484 40.7685 1.23011C41.5561 2.01774 41.9986 3.08599 41.9986 4.19986V15.3995L39.7587 13.7167C37.3323 11.897 34.331 11.0135 31.3058 11.2285C28.2805 11.4435 25.4343 12.7426 23.2897 14.8872C21.1451 17.0317 19.846 19.878 19.631 22.9032C19.416 25.9285 20.2995 28.9298 22.1193 31.3562L22.3993 31.7313V41.9986H4.19986C3.08599 41.9986 2.01774 41.5561 1.23011 40.7685C0.442484 39.9809 0 38.9126 0 37.7987L0 4.19986ZM22.3993 13.9995H8.39972V11.1996H22.3993V13.9995ZM8.39972 22.3993H16.7994V19.5993H8.39972V22.3993Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M32.199 13.9995C30.2691 13.9992 28.382 14.5688 26.7745 15.6369C25.167 16.7049 23.9106 18.2239 23.163 20.0031C22.4154 21.7824 22.2099 23.7429 22.5721 25.6385C22.9344 27.5342 23.8483 29.2807 25.1993 30.659V40.5986C25.1993 40.8586 25.2717 41.1135 25.4083 41.3346C25.545 41.5558 25.7406 41.7345 25.9731 41.8508C26.2057 41.967 26.466 42.0163 26.7249 41.9929C26.9839 41.9696 27.2312 41.8746 27.4392 41.7186L32.199 38.1487L36.9589 41.7186C37.1669 41.8746 37.4142 41.9696 37.6731 41.9929C37.9321 42.0163 38.1924 41.967 38.4249 41.8508C38.6575 41.7345 38.853 41.5558 38.9897 41.3346C39.1264 41.1135 39.1988 40.8586 39.1988 40.5986V30.659C40.5498 29.2807 41.4637 27.5342 41.8259 25.6385C42.1882 23.7429 41.9826 21.7824 41.235 20.0031C40.4874 18.2239 39.2311 16.7049 37.6236 15.6369C36.0161 14.5688 34.129 13.9992 32.199 13.9995ZM27.9992 37.7987V32.6553C29.2731 33.2601 30.6955 33.5989 32.199 33.5989C33.7026 33.5989 35.1249 33.2629 36.3989 32.6553V37.7987L33.039 35.2788C32.7967 35.0971 32.5019 34.9988 32.199 34.9988C31.8961 34.9988 31.6014 35.0971 31.3591 35.2788L27.9992 37.7987Z" />
+            </svg>
+            <h5>証拠</h5>
+            <h6>科学に裏付けられた,<br />データで実証</h6>
+            <p>私たちの研究と認証は、藻類由来材料の品質、安全性、そして可能性を実証しています。私たちのイノベーションを支える科学的データ、実験室レポート、公式認定を探索してください。</p>
+            <a href="/evidences" class="btn read_more_btn">
+                続きを読む
+                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" />
+                    <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                    <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z" />
+                </svg>
+            </a>
+        </div>
+        <div class="card card_2">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.832 32.8794C25.7141 29.2259 31.9874 29.2259 31.9874 29.2259C38.5255 29.1552 39.4094 25.0661 40 23C39.4792 27.2797 37.6045 31.2636 34.6657 34.3363C31.7268 37.409 27.8874 39.3994 23.7405 40C23.1252 38.6657 22.3975 35.6637 23.832 32.8794Z" />
+                <path d="M6.01292 7.14045L5.1888 6.42487C5.12141 6.36478 5.05603 6.3024 4.99277 6.23785C1.76865 9.94639 -0.00744141 14.7265 2.34354e-05 19.6752C2.34354e-05 30.7748 8.75533 39.8008 19.631 40C18.9249 37.8553 18.4628 34.3811 20.227 31.0045C21.8473 27.9023 25.1078 26.6805 27.1841 26.1601C28.5367 25.8284 29.9198 25.641 31.3107 25.6011H31.4167C34.1791 25.5686 35.2513 24.7412 35.7454 24.174C36.3575 23.4747 36.5975 22.6453 36.9315 21.4886L36.9756 21.3381C37.1655 20.6819 37.5669 20.1096 38.1155 19.7133C38.664 19.3169 39.3277 19.1195 40 19.1528C39.8835 14.2754 38.0381 9.60477 34.8032 6C34.7392 6.35982 34.6632 6.69728 34.5892 6.99408C34.2491 8.33782 33.6811 9.7893 32.981 10.8667C32.2989 11.9238 31.0827 12.8651 30.2765 13.4546C29.6665 13.8998 29.0424 14.2677 28.5303 14.5706L28.3463 14.6784C27.8822 14.9488 27.5141 15.1663 27.1621 15.4001C26.45 15.8778 26.0219 16.3027 25.7339 16.878C25.9099 17.5326 26.0339 18.2868 26.0379 19.0735C26.0419 20.9478 25.0978 22.4277 23.9716 23.3507C22.8368 24.273 21.424 24.7698 19.971 24.7574C14.0701 24.6924 10.6096 19.7992 10.1635 14.7597C10.0335 13.294 9.38543 11.7144 8.47929 10.2426C7.78552 9.10965 6.95717 8.06776 6.01292 7.14045Z" />
+                <path d="M14.0535 15.5709C13.6768 11.2135 10.4395 7.15296 8.86622 5.66843L8 4.8948C11.6252 1.72663 16.2139 -0.00736962 20.953 2.3544e-05C25.413 2.3544e-05 29.5346 1.50546 32.8706 4.04799C33.342 5.53461 32.4435 8.63958 31.5007 10.1241C31.1583 10.6615 30.3847 11.3306 29.5346 11.9641C27.6209 13.3922 25.2035 14.0968 23.9747 16.7271C23.6676 17.3894 23.608 18.1463 23.8075 18.8515C23.9284 19.3115 24.0089 19.8112 24.0089 20.2984C24.013 21.877 22.4739 23.0165 20.953 22.9998C16.9966 22.9559 14.406 19.646 14.0535 15.5709Z" />
+            </svg>
+            <h5>持続可能なビジョン</h5>
+            <h6>自然に循環する,<br />無限に持続可能</h6>
+            <p>「繁栄」を追求する中で、人類は静かに地球を傷つけてきました—CO₂の上昇、環境破壊、そして膨大な廃棄物。今こそ私たちの選択を変える時です。Terra +は新しい道を提供します—あなたと地球の両方を癒す道を。</p>
+            <a href="/sustainability" class="btn read_more_btn">
+                続きを読む
+                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" />
+                    <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                    <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section 6-->
+    <section class="section section_6" id="section_6">
+        <div class="card">
+            <div class="left_wrap">
+                <h2>ニュース</h2>
+                <p>最新のブレイクスルー、パートナーシップ、メディア掲載、持続可能性のマイルストーンなど、すべての情報を一箇所でご確認いただけます。</p>
+                <a href="/news" class="btn pill_btn_darkgreen">
+                    すべてのニュースを読む
+                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" />
+                        <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                        <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="right_wrap">
+                
+                    <div class="text_content">
+                        <span class="date">2025年3月25日</span>
+                        <span class="category">ニュース</span>
+                        <p>リラクゼーションスタジオ「Re.Ra.Ku」でのナチュラルアルジーシリカパウダーのサンプリングキャンペーン</p>
+                        <a href="/news/news-1" class="btn pill_btn_darkgreen">
+                            続きを読む
+                            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" />
+                                <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                                <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z" />
+                            </svg>
+                        </a>
+                    </div>
+                
+                    <div class="text_content">
+                        <span class="date">2025年2月15日</span>
+                        <span class="category">ニュース</span>
+                        <p>私たちのコスメブランド「Terra+」が2月22日（土）JJマガジンのスペシャルイベントに参加！</p>
+                        <a href="/news/news-2" class="btn pill_btn_darkgreen">
+                            続きを読む
+                            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" />
+                                <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                                <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z" />
+                            </svg>
+                        </a>
+                    </div>
+                
+                    <div class="text_content">
+                        <span class="date">2025年2月14日</span>
+                        <span class="category">ニュース</span>
+                        <p>TORIKAI CAFEとTerra+が機能性スイーツ開発で業務提携</p>
+                        <a href="/news/news-3" class="btn pill_btn_darkgreen">
+                            続きを読む
+                            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" />
+                                <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                                <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z" />
+                            </svg>
+                        </a>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="section section_7" id="section_7">
+        <div class="left_wrap">
+            <h2>サステナブルストアで<br />お買い物</h2>
+            <div class="text_content">
+                <p>環境に優しい藻類由来のイノベーションの情報源です。</p>
+                <p>より緑豊かな未来のためにデザインされた最新製品について、私たちの公式ECサイトをご覧ください。</p>
+            </div>
+            <button type="button" onclick="comingSoon()" class="btn pill_iconic_btn_darkgreen">
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="iconic_svg" d="M6.56311 17.9689C6.56311 19.0646 5.68653 19.9611 4.61515 19.9611C3.54378 19.9611 2.67694 19.0646 2.67694 17.9689C2.67694 16.8732 3.54378 15.9767 4.61515 15.9767C5.68653 15.9767 6.56311 16.8732 6.56311 17.9689ZM14.3549 15.9767C13.2836 15.9767 12.4167 16.8732 12.4167 17.9689C12.4167 19.0646 13.2836 19.9611 14.3549 19.9611C15.4263 19.9611 16.3029 19.0646 16.3029 17.9689C16.3029 16.8732 15.4263 15.9767 14.3549 15.9767ZM14.7406 10.9961C15.1838 10.996 15.6136 10.8414 15.9593 10.5578C16.3049 10.2743 16.5457 9.8786 16.6418 9.4362L18.2509 3.0272H4.61515V2.03109C4.61515 1.50271 4.40992 0.995982 4.04461 0.622367C3.6793 0.248751 3.18383 0.0388565 2.6672 0.0388565H0.719238V2.03109H2.6672V12.9883C2.6672 13.5167 2.87243 14.0234 3.23774 14.3971C3.60305 14.7707 4.09852 14.9806 4.61515 14.9806H16.3029C16.3029 14.4522 16.0977 13.9455 15.7324 13.5719C15.367 13.1982 14.8716 12.9883 14.3549 12.9883H4.61515V10.9961H14.7406Z" />
+                </svg>
+                今すぐ購入
+                <svg class="right_svg" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.62611 13.3752C3.10104 13.3752 0.250977 10.5251 0.250977 7.00007C0.250977 3.47499 3.10104 0.624931 6.62611 0.624931C10.1512 0.624931 13.0012 3.47499 13.0012 7.00007C13.0012 10.5251 10.1512 13.3752 6.62611 13.3752ZM6.62611 1.37495C3.51354 1.37495 1.00099 3.8875 1.00099 7.00007C1.00099 10.1126 3.51354 12.6252 6.62611 12.6252C9.73868 12.6252 12.2512 10.1126 12.2512 7.00007C12.2512 3.8875 9.73868 1.37495 6.62611 1.37495Z" />
+                    <path d="M6.51378 10.6373L5.98877 10.1122L9.10134 6.99968L5.98877 3.88712L6.51378 3.36211L10.1514 6.99968L6.51378 10.6373Z" />
+                    <path d="M3.25098 6.6249H9.62611V7.37492H3.25098V6.6249Z" />
+                </svg>
+            </button>
+        </div>
+        <div class="right_wrap card">
+            <img src="Images/Home/Section_7/Terra_Plus_Product.webp" alt="Terra Plus Product" />
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <style>
+    #footer_section_1 {display: flex;align-items: end;justify-content: center;gap: 5%;padding: 0.52dvw 10%;background-color: var(--footer_primary_bg);height: 5.21dvw;}
+    #footer_section_1 a {color: var(--white);font-size: 1.15dvw;}
+    #footer_section_1 a:hover {color: var(--primary);text-decoration: underline;transition: all 0.3s ease;}
+
+    #footer_section_2 {display: flex;align-items: center;justify-content: space-between;padding: 1.04dvw 10%;background-color: var(--footer_secondary_bg);height: 7.81dvw;}
+    #footer_section_2 #footer_logo_wrap {display: flex;align-items: start;justify-content: start; width: 35%;height: 100%;}
+    #footer_section_2 #footer_logo_wrap a {height: 100%;cursor: pointer;}
+    #footer_section_2 #footer_logo_wrap a img {height: 50%;object-fit: contain;}
+    #footer_section_2 #copyright_notice {display: flex;align-items: end;justify-content: center;width: 20%;height: 100%;}
+    #footer_section_2 #copyright_notice span {font-family: 'Figtree';font-size: 0.63dvw;text-align: center;color: rgba(255, 255, 255, 0.8);}
+    #footer_section_2 #sub_navigation {min-width: 30%;height: 100%;display: flex;align-items: center;justify-content: space-between;}
+    #footer_section_2 #sub_navigation a {color: var(--white);font-size: 1.15dvw;}
+    #footer_section_2 #sub_navigation a:hover {color: var(--primary);text-decoration: underline;transition: all 0.3s ease;}
+
+    @media (max-width: 768px) {
+        #footer_section_1 {display: none;}
+
+        #footer_section_2 {flex-direction: column;padding: 5% 5% 8% 5%;gap: 6.25dvw;height: auto;}
+        #footer_section_2 #footer_logo_wrap {order: 2;width: 100%;}
+        #footer_section_2 #footer_logo_wrap a {text-align: center;}
+        #footer_section_2 #footer_logo_wrap a img {justify-content: center;width: 50%;}
+        #footer_section_2 #copyright_notice {order: 3;width: 100%;}
+        #footer_section_2 #copyright_notice span {font-size: 2.50dvw;}
+        #footer_section_2 #sub_navigation {order: 1;width: 100%;}
+        #footer_section_2 #sub_navigation a {justify-content: space-between;font-size: 2.92dvw;}
+    }
+</style>
+
+<footer>
+    <div id="footer_section_1">
+        <a href="/about-us">私たちについて</a>
+        <a href="#" onclick="comingSoon()">製品</a>
+        <a href="/evidences">証拠</a>
+        <a href="/sustainability">持続可能性</a>
+        <a href="/news" >ニュース</a>
+    </div>
+
+    <div id="footer_section_2">
+        <!-- Logo -->
+        <div id="footer_logo_wrap">
+            <a href="/">
+                <img src="/Images/Assets/Logo/Terra_Plus_white_logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <!-- Company-->
+        <div id="copyright_notice">
+            <span>© TerraPlus Co., Ltd.</span>
+        </div>
+
+        <!-- Navigation -->
+        <div id="sub_navigation">
+            <a href="/privacy-policy">プライバシーポリシー</a>
+            <a href="/term-of-use" >利用規約</a>
+            <!-- <a href="#" onclick="comingSoon()">サイトマップ</a> -->
+        </div>
+    </div>
+</footer>
+
+<!-- Local Custom JS -->
+<script src="/scripts/script.js"></script>
+
+    <!-- GSAP Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            /* Section 1 */
+            const section1 = document.querySelector('.section_1');
+            if (section1) {
+                const card = section1.querySelector('.card');
+                const titleWrap = card ? card.querySelector('.title_wrap') : null;
+                const h5 = titleWrap ? titleWrap.querySelector('h5') : null;
+                const p = titleWrap ? titleWrap.querySelector('p') : null;
+                const imageWrap = card ? card.querySelector('.image_wrap img') : null;
+                const scrollDown = card ? card.querySelector('#scroll_down') : null;
+
+                // Set initial state to hidden for all elements
+                gsap.set([section1, card, h5, p, imageWrap, scrollDown], { opacity: 0 });
+
+                gsap.to([section1, card, h5, p, imageWrap, scrollDown], {
+                    scrollTrigger: {
+                        trigger: ".section_1",
+                        start: "top 60%",
+                        toggleActions: "play none none none",
+                    },
+                    opacity: 1,
+                    duration: 1,
+                    delay: 0.1,
+                    onStart: () => {
+                        if (h5) {
+                            h5.classList.add('animate__animated', 'animate__fadeInDown');
+                            h5.style.setProperty('--animate-duration', '1s');
+                            h5.style.setProperty('--animate-delay', '0.2s');
+                        }
+                        if (p) {
+                            p.classList.add('animate__animated', 'animate__fadeInUp');
+                            p.style.setProperty('--animate-duration', '1s');
+                            p.style.setProperty('--animate-delay', '0.4s');
+                        }
+                        if (imageWrap) {
+                            imageWrap.classList.add('animate__animated', 'animate__zoomIn');
+                            imageWrap.style.setProperty('--animate-duration', '1s');
+                            imageWrap.style.setProperty('--animate-delay', '0.6s');
+                        }
+                        if (scrollDown) {
+                            scrollDown.classList.add('animate__animated', 'animate__fadeInUp');
+                            scrollDown.style.setProperty('--animate-duration', '1s');
+                            scrollDown.style.setProperty('--animate-delay', '0.8s');
+                        }
+                    },
+                    onReverseComplete: () => {
+                        if (h5) h5.classList.remove('animate__animated', 'animate__fadeInDown');
+                        if (p) p.classList.remove('animate__animated', 'animate__fadeInUp');
+                        if (imageWrap) imageWrap.classList.remove('animate__animated', 'animate__zoomIn');
+                        if (scrollDown) scrollDown.classList.remove('animate__animated', 'animate__fadeInUp');
+                    }
+                });
+            }
+
+            /* Section 2 */
+            const section2 = document.querySelector('.section_2'); // Fixed selector to match intent
+            if (section2) {
+                const heading = section2.querySelector('h2');
+                const card1 = section2.querySelector('.card_1');
+                const card2 = section2.querySelector('.card_2');
+                const card3 = section2.querySelector('.card_3');
+
+                gsap.set([section2, heading, card1, card2, card3], { opacity: 0 });
+                gsap.to(section2, {
+                    scrollTrigger: {
+                        trigger: ".section_2", // Fixed trigger to match variable
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 1,
+                    duration: 1,
+                    onStart: () => {
+                        if (heading) {
+                            heading.classList.add('animate__animated', 'animate__fadeInDown');
+                            heading.style.setProperty('--animate-duration', '1s');
+                            heading.style.setProperty('--animate-delay', '0.2s');
+                        }
+                        if (card1) {
+                            card1.classList.add('animate__animated', 'animate__fadeInLeft');
+                            card1.style.setProperty('--animate-duration', '1s');
+                            card1.style.setProperty('--animate-delay', '0.4s');
+                        }
+                        if (card2) {
+                            card2.classList.add('animate__animated', 'animate__fadeInLeft');
+                            card2.style.setProperty('--animate-duration', '1s');
+                            card2.style.setProperty('--animate-delay', '0.6s');
+                        }
+                        if (card3) {
+                            card3.classList.add('animate__animated', 'animate__fadeInRight');
+                            card3.style.setProperty('--animate-duration', '1s');
+                            card3.style.setProperty('--animate-delay', '0.4s');
+                        }
+                    },
+                    onReverseComplete: () => {
+                        if (heading) {
+                            heading.classList.remove('animate__animated', 'animate__fadeInDown');
+                        }
+                        if (card1) {
+                            card1.classList.remove('animate__animated', 'animate__fadeInLeft');
+                        }
+                        if (card2) {
+                            card2.classList.remove('animate__animated', 'animate__fadeInLeft');
+                        }
+                        if (card3) {
+                            card3.classList.remove('animate__animated', 'animate__fadeInRight');
+                        }
+                    }
+                });
+            }
+
+            /* Section 3 */
+            const section3 = document.querySelector('.section_3');
+            if (section3) {
+                const heading = section3.querySelector('h2');
+                const cards = section3.querySelectorAll('.card_wrap .card');
+
+                // Set initial state to hidden for all elements
+                gsap.set([section3, heading, ...cards], { opacity: 0 });
+
+                // ScrollTrigger for Section 3
+                gsap.to(section3, {
+                    scrollTrigger: {
+                        trigger: ".section_3",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 1,
+                    duration: 1,
+                    onStart: () => {
+                        // Animate the heading
+                        if (heading) {
+                            heading.classList.add('animate__animated', 'animate__fadeInDown');
+                            heading.style.setProperty('--animate-duration', '1s');
+                            heading.style.setProperty('--animate-delay', '0.2s');
+                        }
+                        // Animate each card, image, and label with staggered timing
+                        cards.forEach((card, index) => {
+                            // Card animation
+                            card.classList.add('animate__animated', 'animate__fadeInUp');
+                            card.style.setProperty('--animate-duration', '1s');
+                            card.style.setProperty('--animate-delay', `${0.4 + index * 0.1}s`);
+
+                            // Image animation
+                            const img = card.querySelector('img');
+                            if (img) {
+                                img.classList.add('animate__animated', 'animate__zoomIn');
+                                img.style.setProperty('--animate-duration', '0.8s');
+                                img.style.setProperty('--animate-delay', `${0.5 + index * 0.1}s`);
+                            }
+
+                            // Label animation
+                            const label = card.querySelector('.card_label span');
+                            if (label) {
+                                label.classList.add('animate__animated', 'animate__fadeInUp');
+                                label.style.setProperty('--animate-duration', '1s');
+                                label.style.setProperty('--animate-delay', `${0.6 + index * 0.1}s`);
+                            }
+                        });
+                    },
+                    onReverseComplete: () => {
+                        // Remove heading animation classes
+                        if (heading) {
+                            heading.classList.remove('animate__animated', 'animate__fadeInDown');
+                        }
+                        // Remove card, image, and label animation classes
+                        cards.forEach((card) => {
+                            card.classList.remove('animate__animated', 'animate__fadeInUp');
+                            const img = card.querySelector('img');
+                            const label = card.querySelector('.card_label span');
+                            if (img) {
+                                img.classList.remove('animate__animated', 'animate__zoomIn');
+                            }
+                            if (label) {
+                                label.classList.remove('animate__animated', 'animate__fadeInUp');
+                            }
+                        });
+                    }
+                });
+            }
+
+            /* Section 4 */
+            const section4 = document.querySelector('.section_4');
+            if (section4) {
+                const card = section4.querySelector('.card');
+                const heading = section4.querySelector('h2');
+                const subheading = section4.querySelector('h5');
+                const paragraph = section4.querySelector('p');
+                const button = section4.querySelector('.more_details_btn');
+
+                // Set initial state to hidden for all elements
+                gsap.set([section4, heading, subheading, paragraph, button], { opacity: 0 });
+
+                // ScrollTrigger for Section 4
+                gsap.to(section4, {
+                    scrollTrigger: {
+                        trigger: ".section_4",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 1,
+                    duration: 1,
+                    onStart: () => {
+                        // Animate the heading
+                        if (heading) {
+                            heading.classList.add('animate__animated', 'animate__fadeInDown');
+                            heading.style.setProperty('--animate-duration', '1s');
+                            heading.style.setProperty('--animate-delay', '0.2s');
+                        }
+                        // Animate the subheading
+                        if (subheading) {
+                            subheading.classList.add('animate__animated', 'animate__fadeInUp');
+                            subheading.style.setProperty('--animate-duration', '1s');
+                            subheading.style.setProperty('--animate-delay', '0.4s');
+                        }
+                        // Animate the paragraph
+                        if (paragraph) {
+                            paragraph.classList.add('animate__animated', 'animate__fadeInUp');
+                            paragraph.style.setProperty('--animate-duration', '1s');
+                            paragraph.style.setProperty('--animate-delay', '0.6s');
+                        }
+                        // Animate the button
+                        if (button) {
+                            button.classList.add('animate__animated', 'animate__pulse');
+                            button.style.setProperty('--animate-duration', '1.2s');
+                            button.style.setProperty('--animate-delay', '0.8s');
+                        }
+                    },
+                    onReverseComplete: () => {
+                        // Remove heading animation classes
+                        if (heading) {
+                            heading.classList.remove('animate__animated', 'animate__fadeInDown');
+                        }
+                        // Remove subheading animation classes
+                        if (subheading) {
+                            subheading.classList.remove('animate__animated', 'animate__fadeInUp');
+                        }
+                        // Remove paragraph animation classes
+                        if (paragraph) {
+                            paragraph.classList.remove('animate__animated', 'animate__fadeInUp');
+                        }
+                        // Remove button animation classes
+                        if (button) {
+                            button.classList.remove('animate__animated', 'animate__pulse');
+                        }
+                    }
+                });
+            }
+
+            /* Section 5 */
+            const section5 = document.querySelector('.section_5');
+            if (section5) {
+                const card1 = section5.querySelector('.card_1');
+                const card2 = section5.querySelector('.card_2');
+                const svg1 = card1 ? card1.querySelector('svg') : null;
+                const svg2 = card2 ? card2.querySelector('svg') : null;
+                const h5_1 = card1 ? card1.querySelector('h5') : null;
+                const h5_2 = card2 ? card2.querySelector('h5') : null;
+                const h6_1 = card1 ? card1.querySelector('h6') : null;
+                const h6_2 = card2 ? card2.querySelector('h6') : null;
+                const p1 = card1 ? card1.querySelector('p') : null;
+                const p2 = card2 ? card2.querySelector('p') : null;
+                const btn1 = card1 ? card1.querySelector('.read_more_btn') : null;
+                const btn2 = card2 ? card2.querySelector('.read_more_btn') : null;
+
+                // Set initial state to hidden for all elements
+                gsap.set([section5, svg1, svg2, h5_1, h5_2, h6_1, h6_2, p1, p2, btn1, btn2], { opacity: 0 });
+
+                // ScrollTrigger for Section 5
+                gsap.to([section5, svg1, svg2, h5_1, h5_2, h6_1, h6_2, p1, p2, btn1, btn2], {
+                    scrollTrigger: {
+                        trigger: ".section_5",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 1,
+                    duration: 1,
+                    onStart: () => {
+                        // Card 1 animations
+                        if (svg1) {
+                            svg1.classList.add('animate__animated', 'animate__zoomIn');
+                            svg1.style.setProperty('--animate-duration', '0.8s');
+                            svg1.style.setProperty('--animate-delay', '0.2s');
+                        }
+                        if (h5_1) {
+                            h5_1.classList.add('animate__animated', 'animate__fadeInDown');
+                            h5_1.style.setProperty('--animate-duration', '1s');
+                            h5_1.style.setProperty('--animate-delay', '0.4s');
+                        }
+                        if (h6_1) {
+                            h6_1.classList.add('animate__animated', 'animate__fadeInDown');
+                            h6_1.style.setProperty('--animate-duration', '1s');
+                            h6_1.style.setProperty('--animate-delay', '0.6s');
+                        }
+                        if (p1) {
+                            p1.classList.add('animate__animated', 'animate__fadeInUp');
+                            p1.style.setProperty('--animate-duration', '1s');
+                            p1.style.setProperty('--animate-delay', '0.8s');
+                        }
+                        if (btn1) {
+                            btn1.classList.add('animate__animated', 'animate__pulse');
+                            btn1.style.setProperty('--animate-duration', '1.2s');
+                            btn1.style.setProperty('--animate-delay', '1s');
+                        }
+                        // Card 2 animations
+                        if (svg2) {
+                            svg2.classList.add('animate__animated', 'animate__zoomIn');
+                            svg2.style.setProperty('--animate-duration', '0.8s');
+                            svg2.style.setProperty('--animate-delay', '0.3s');
+                        }
+                        if (h5_2) {
+                            h5_2.classList.add('animate__animated', 'animate__fadeInDown');
+                            h5_2.style.setProperty('--animate-duration', '1s');
+                            h5_2.style.setProperty('--animate-delay', '0.5s');
+                        }
+                        if (h6_2) {
+                            h6_2.classList.add('animate__animated', 'animate__fadeInDown');
+                            h6_2.style.setProperty('--animate-duration', '1s');
+                            h6_2.style.setProperty('--animate-delay', '0.7s');
+                        }
+                        if (p2) {
+                            p2.classList.add('animate__animated', 'animate__fadeInUp');
+                            p2.style.setProperty('--animate-duration', '1s');
+                            p2.style.setProperty('--animate-delay', '0.9s');
+                        }
+                        if (btn2) {
+                            btn2.classList.add('animate__animated', 'animate__pulse');
+                            btn2.style.setProperty('--animate-duration', '1.2s');
+                            btn2.style.setProperty('--animate-delay', '1.1s');
+                        }
+                    },
+                    onReverseComplete: () => {
+                        // Remove Card 1 animation classes
+                        if (svg1) {
+                            svg1.classList.remove('animate__animated', 'animate__zoomIn');
+                        }
+                        if (h5_1) {
+                            h5_1.classList.remove('animate__animated', 'animate__fadeInDown');
+                        }
+                        if (h6_1) {
+                            h6_1.classList.remove('animate__animated', 'animate__fadeInDown');
+                        }
+                        if (p1) {
+                            p1.classList.remove('animate__animated', 'animate__fadeInUp');
+                        }
+                        if (btn1) {
+                            btn1.classList.remove('animate__animated', 'animate__pulse');
+                        }
+                        // Remove Card 2 animation classes
+                        if (svg2) {
+                            svg2.classList.remove('animate__animated', 'animate__zoomIn');
+                        }
+                        if (h5_2) {
+                            h5_2.classList.remove('animate__animated', 'animate__fadeInDown');
+                        }
+                        if (h6_2) {
+                            h6_2.classList.remove('animate__animated', 'animate__fadeInDown');
+                        }
+                        if (p2) {
+                            p2.classList.remove('animate__animated', 'animate__fadeInUp');
+                        }
+                        if (btn2) {
+                            btn2.classList.remove('animate__animated', 'animate__pulse');
+                        }
+                    }
+                });
+            }
+
+            /* Section 6 */
+            const section6 = document.querySelector('.section_6');
+            if (section6) {
+                const leftWrap = section6.querySelector('.left_wrap');
+                const rightWrap = section6.querySelector('.right_wrap');
+                const heading = leftWrap ? leftWrap.querySelector('h2') : null;
+                const leftP = leftWrap ? leftWrap.querySelector('p') : null;
+                const leftBtn = leftWrap ? leftWrap.querySelector('.pill_btn_darkgreen') : null;
+                const textContents = rightWrap ? rightWrap.querySelectorAll('.text_content') : [];
+
+                // Collect all elements for opacity tween
+                const allElements = [section6, heading, leftP, leftBtn];
+                textContents.forEach(content => {
+                    const date = content.querySelector('.date');
+                    const category = content.querySelector('.category');
+                    const p = content.querySelector('p');
+                    const btn = content.querySelector('.pill_btn_darkgreen');
+                    if (date) allElements.push(date);
+                    if (category) allElements.push(category);
+                    if (p) allElements.push(p);
+                    if (btn) allElements.push(btn);
+                });
+
+                // Set initial state to hidden for all elements
+                gsap.set(allElements, { opacity: 0 });
+
+                // ScrollTrigger for Section 6
+                gsap.to(allElements, {
+                    scrollTrigger: {
+                        trigger: ".section_6",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 1,
+                    duration: 1,
+                    onStart: () => {
+                        // Left wrap animations
+                        if (heading) {
+                            heading.classList.add('animate__animated', 'animate__fadeInDown');
+                            heading.style.setProperty('--animate-duration', '1s');
+                            heading.style.setProperty('--animate-delay', '0.2s');
+                        }
+                        if (leftP) {
+                            leftP.classList.add('animate__animated', 'animate__fadeInUp');
+                            leftP.style.setProperty('--animate-duration', '1s');
+                            leftP.style.setProperty('--animate-delay', '0.4s');
+                        }
+                        if (leftBtn) {
+                            leftBtn.classList.add('animate__animated', 'animate__pulse');
+                            leftBtn.style.setProperty('--animate-duration', '1.2s');
+                            leftBtn.style.setProperty('--animate-delay', '0.6s');
+                        }
+                        // Right wrap animations
+                        textContents.forEach((content, index) => {
+                            const date = content.querySelector('.date');
+                            const category = content.querySelector('.category');
+                            const p = content.querySelector('p');
+                            const btn = content.querySelector('.pill_btn_darkgreen');
+                            const baseDelay = 0.4 + index * 0.3; // Stagger each text_content
+                            if (date) {
+                                date.classList.add('animate__animated', 'animate__fadeInDown');
+                                date.style.setProperty('--animate-duration', '1s');
+                                date.style.setProperty('--animate-delay', `${baseDelay}s`);
+                            }
+                            if (category) {
+                                category.classList.add('animate__animated', 'animate__fadeInDown');
+                                category.style.setProperty('--animate-duration', '1s');
+                                category.style.setProperty('--animate-delay', `${baseDelay + 0.1}s`);
+                            }
+                            if (p) {
+                                p.classList.add('animate__animated', 'animate__fadeInUp');
+                                p.style.setProperty('--animate-duration', '1s');
+                                p.style.setProperty('--animate-delay', `${baseDelay + 0.2}s`);
+                            }
+                            if (btn) {
+                                btn.classList.add('animate__animated', 'animate__pulse');
+                                btn.style.setProperty('--animate-duration', '1.2s');
+                                btn.style.setProperty('--animate-delay', `${baseDelay + 0.3}s`);
+                            }
+                        });
+                    },
+                    onReverseComplete: () => {
+                        // Remove left wrap animation classes
+                        if (heading) {
+                            heading.classList.remove('animate__animated', 'animate__fadeInDown');
+                        }
+                        if (leftP) {
+                            leftP.classList.remove('animate__animated', 'animate__fadeInUp');
+                        }
+                        if (leftBtn) {
+                            leftBtn.classList.remove('animate__animated', 'animate__pulse');
+                        }
+                        // Remove right wrap animation classes
+                        textContents.forEach((content) => {
+                            const date = content.querySelector('.date');
+                            const category = content.querySelector('.category');
+                            const p = content.querySelector('p');
+                            const btn = content.querySelector('.pill_btn_darkgreen');
+                            if (date) {
+                                date.classList.remove('animate__animated', 'animate__fadeInDown');
+                            }
+                            if (category) {
+                                category.classList.remove('animate__animated', 'animate__fadeInDown');
+                            }
+                            if (p) {
+                                p.classList.remove('animate__animated', 'animate__fadeInUp');
+                            }
+                            if (btn) {
+                                btn.classList.remove('animate__animated', 'animate__pulse');
+                            }
+                        });
+                    }
+                });
+            }
+
+            /* Section 7 */
+            const section7 = document.querySelector('.section_7');
+            if (section7) {
+                const leftWrap = section7.querySelector('.left_wrap');
+                const rightWrap = section7.querySelector('.right_wrap');
+                const heading = leftWrap ? leftWrap.querySelector('h2') : null;
+                const textContent = leftWrap ? leftWrap.querySelector('.text_content') : null;
+                const btn = leftWrap ? leftWrap.querySelector('.pill_iconic_btn_darkgreen') : null;
+                const img = rightWrap ? rightWrap.querySelector('img') : null;
+
+                // Set initial state to hidden for all elements
+                gsap.set([section7, heading, textContent, btn, img], { opacity: 0 });
+
+                gsap.to([section7, heading, textContent, btn, img], {
+                    scrollTrigger: {
+                        trigger: ".section_7",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                    opacity: 1,
+                    duration: 1,
+                    onStart: () => {
+                        if (heading) {
+                            heading.classList.add('animate__animated', 'animate__fadeInDown');
+                            heading.style.setProperty('--animate-duration', '1s');
+                            heading.style.setProperty('--animate-delay', '0.2s');
+                        }
+                        if (textContent) {
+                            textContent.classList.add('animate__animated', 'animate__fadeInUp');
+                            textContent.style.setProperty('--animate-duration', '1s');
+                            textContent.style.setProperty('--animate-delay', '0.4s');
+                        }
+                        if (btn) {
+                            btn.classList.add('animate__animated', 'animate__pulse');
+                            btn.style.setProperty('--animate-duration', '1.2s');
+                            btn.style.setProperty('--animate-delay', '0.6s');
+                        }
+                        if (img) {
+                            img.classList.add('animate__animated', 'animate__zoomIn');
+                            img.style.setProperty('--animate-duration', '1s');
+                            img.style.setProperty('--animate-delay', '0.8s');
+                        }
+                    },
+                    onReverseComplete: () => {
+                        if (heading) {
+                            heading.classList.remove('animate__animated', 'animate__fadeInDown');
+                        }
+                        if (textContent) {
+                            textContent.classList.remove('animate__animated', 'animate__fadeInUp');
+                        }
+                        if (btn) {
+                            btn.classList.remove('animate__animated', 'animate__pulse');
+                        }
+                        if (img) {
+                            img.classList.remove('animate__animated', 'animate__zoomIn');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
